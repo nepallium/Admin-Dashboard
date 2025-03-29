@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 id="dashboard" class="nav-item">
+            <span class="material-icons">dashboard</span>
+            <a href="">Dashboard</a>
+        </h1>
+        <nav class="options">
+            <ul class="top">
+                <li id="home" class="nav-item">
+                    <span class="material-icons">home</span>
+                    <a href="">Home</a>
+                </li>
+                <li id="profile" class="nav-item">
+                    <span class="material-icons">person</span>
+                    <a href="">Profile</a>
+                </li>
+                <li id="messages" class="nav-item">
+                    <span class="material-icons">message</span>
+                    <a href="">Messages</a>
+                </li>
+                <li id="history" class="nav-item">
+                    <span class="material-icons">history</span>
+                    <a href="">History</a>
+                </li>
+                <li id="tasks" class="nav-item">
+                    <span class="material-icons">file_copy</span>
+                    <a href="">Tasks</a>
+                </li>
+                <li id="communities" class="nav-item">
+                    <span class="material-icons">groups</span>
+                    <a href="">Communities</a>
+                </li>
+            </ul>
+            <ul class="bottom">
+                <li id="settings" class="nav-item">
+                    <span class="material-icons">settings</span>
+                    <a href="">Settings</a>
+                </li>
+                <li id="support" class="nav-item">
+                    <span class="material-icons">help</span>
+                    <a href="">Support</a>
+                </li>
+                <li id="privacy" class="nav-item">
+                    <span class="material-icons">security</span>
+                    <a href="">Privacy</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <div class="search-bar">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="profile-small">
+            <span class="material-icons">notifications_active</span>
+            <img alt="profile picture" class="profile-picture">
+            <p>Morgan Oakley</p>
+        </div>
+        <div class="profile-big">
+            <img alt="profile picture" class="profile-picture">
+            <div class="welcome">
+                <p>Hi there,</p>
+                <p id="user-info">Morgan Oakley (@morgan)</p>
+            </div>
+        </div>
+        <ul class="media-options">
+            <li><button>New</button></li>
+            <li><button>Upload</button></li>
+            <li><button>Share</button></li>
+        </ul>
+    </header>
+    <div class="main-content">
+        <div class="left-side">
+            <p class="category">Your Projects</p>
+            <div class="projects">
+                <div class="project">
+                    <p class="title">Super Cool Project</p>
+                    <p class="content">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id
+                        facilisis felis accumsan nec.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <p class="title">Less Cool Project</p>
+                    <p class="content">Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor
+                        tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in,
+                        varius pellentesque lacus.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <p class="title">Impossible App</p>
+                    <p class="content">In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit
+                        sagittis id.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <p class="title">Easy Peasy App</p>
+                    <p class="content">Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan
+                        aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <p class="title">Ad Blocker</p>
+                    <p class="content">Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra
+                        hendrerit felis. Aliquam sed malesuada eros.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <p class="title">Money Maker</p>
+                    <p class="content">Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac
+                        scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+                    <ul class="project-options">
+                        <li><a href=""><span class="material-icons">add_task</span></a></li>
+                        <li><a href=""><span class="material-icons">library_add</span></a></li>
+                        <li><a href=""><span class="material-icons">share</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="annoucements">
+                <p class="category">Annoucements</p>
+                <div class="info">
+                    <p class="title">Site Maintenance</p>
+                    <p class="content">Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donec hendrerit
+                        sodales congue.</p>
+                </div>
+                <div class="info">
+                    <p class="title">Community Share Day</p>
+                    <p class="content">Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan
+                        portitor.</p>
+                </div>
+                <div class="info">
+                    <p class="title">Updated Privacy Policy</p>
+                    <p class="content">Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras
+                        fringilla sagittis sem in mattis.</p>
+                </div>
+            </div>
+
+            <div class="trending">
+                <p class="category">Trending</p>
+                <div class="profile">
+                    <img alt="profile-picture">
+                    <p class="name">@tegan</p>
+                    <p class="info">World Peace Builder</p>
+                </div>
+                <div class="profile">
+                    <img alt="profile-picture">
+                    <p class="name">@morgan</p>
+                    <p class="info">Super Cool Project</p>
+                </div>
+                <div class="profile">
+                    <img alt="profile-picture">
+                    <p class="name">@kendall</p>
+                    <p class="info">Life Changing App</p>
+                </div>
+                <div class="profile">
+                    <img alt="profile-picture">
+                    <p class="name">@alex</p>
+                    <p class="info">No Traffic Maker</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
