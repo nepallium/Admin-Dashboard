@@ -117,7 +117,19 @@ header {
     }
 
     
+    .profile-picture {
+        border-radius: 50%;
+        
+        &.small {
+            width: 45px;
+        }
+
+        &.big {
+            width: 60px;
+        }
+    }
     
+
     span:hover, button:hover, img:hover {
         cursor: pointer;
     }
