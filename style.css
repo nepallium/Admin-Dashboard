@@ -40,11 +40,12 @@ a:visited {
 
 body {
     display: grid;
-    grid-template: max-content 1fr / max-content 3fr;
+    grid-template: auto 1fr / max-content 3fr;
+    grid-template-columns: max-content 3fr;
     height: 100vh;
 
     > * {
-        padding: 1.7rem;
+        padding: 1.2rem;
     }
 }
 
@@ -98,11 +99,12 @@ header {
     grid-row: 1;
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
     grid-template-columns: 4fr 1fr;
-    gap: 30px;
-
+    row-gap: 12px;
     border-bottom: 2px solid rgb(105, 105, 105, 50%);
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
 
     .search-bar, .profile-small, .media-options, .profile-big {
         display: flex;
@@ -112,6 +114,7 @@ header {
 
     .search-bar {
         input {
+            max-width: 600px;
             border-radius: 16px;
             flex: 1;
             padding: 0 14px;
@@ -122,6 +125,11 @@ header {
     .profile-small {
         justify-content: end;
         padding-right: 0.3rem;
+
+        p {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
     }
 
     .profile-big {
@@ -159,6 +167,10 @@ header {
         }
     }
 
+    .search-bar, .profile-small {
+        align-self: center;
+    }
+
 
     span:hover, button:hover, img:hover {
         cursor: pointer;
@@ -168,6 +180,10 @@ header {
 
 /* MAIN CONTENT */
 .main-content {
+    --content-gap: 20px;
+    --title-gap: 0.8rem;
+    --container-radius: 10px;
+
     background-color: lightgray;
 
     grid-row: 2;
@@ -175,32 +191,47 @@ header {
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    --content-gap: 25px;
     gap: var(--content-gap);
     
     /* Embolden titles */
     p:nth-child(1) {
         font-weight: bold;
     }
+    /* Lighten content text */
+    p:nth-of-type(2) {
+        color: rgb(105, 105, 105)
+    }
 
     .category {
         font-weight: bold;
         font-size: 18px;
+        margin-bottom: var(--title-gap);
     }
 
     /* LEFT SIDE */
     .left-side {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+
 
         .projects {
             display: grid;
-            grid-template: repeat(3, 1fr) / 1fr 1fr;
+            grid-template: repeat(3, auto) / 1fr 1fr;
+            gap: var(--content-gap);
         
             .project {
-                grid-template-rows: repeat(3, 1fr);
+                display: grid;
+                grid-template-rows: min-content 1fr auto;
+
+                background-color: white;
+                padding: 1.2rem;
+                border-radius: var(--container-radius);
+                border-left: 8px solid gold;
+
                 
                 .project-options {
                     display: flex;
-                    gap: 2rem;
+                    gap: 1rem;
                     justify-self: end;
                 }
             }
@@ -211,18 +242,64 @@ header {
     /* RIGHT SIDE */
     .right-side {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 2rem;
+        grid-template-rows: 1fr auto;
+        gap: 1rem;
+
+        .annoucements {
+            display: grid;
+            grid-template-rows: auto 1fr;
+
+            .info-container {
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                padding: 1.5rem; /* Keep padding around container */
+
+                border-radius: var(--container-radius);
+                background-color: white;
+
+                .info {
+                    padding: 1rem 0;
+                    border-bottom: 1px solid lightgrey;
+
+                    &:first-child {
+                        padding-top: 0;
+                        border-top: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
 
         .trending {
-            display: grid;
-            grid-template-rows: max-content repeat(4, 1fr);
+            --trending-gap: 1rem;
+
+            .profiles-container {
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                
+                background-color: white;
+                height: 300px;
+                padding: 1.2rem;
+                gap: var(--trending-gap);
+                border-radius: var(--container-radius); /* Added for consistency */
+            }
 
             .profile {
                 display: grid;
-                grid-template: 1fr 1fr / 1fr 3fr;
+                grid-template: auto 1fr / 1fr 3fr;
+                column-gap: var(--trending-gap);
+                justify-content: center;
 
                 img {
+                    align-self: center;
+                    justify-self: center;
+                    height: auto;
+                    max-height: 50px;
+                    width: auto;
                     grid-row: span 2;
                 }
             }
