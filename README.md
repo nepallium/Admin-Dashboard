@@ -1,6 +1,6 @@
 # Admin-Dashboard
 
-**Live preview [here](https://nepallium.github.io/Calculator/)!**
+**Live preview [here](https://nepallium.github.io/Admin-Dashboard/)!**
 
 A mock admin dashboard using HTML, CSS as a project for *The Odin Project* curriculum.
 
